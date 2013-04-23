@@ -14,17 +14,32 @@ public class Board {
     }
 
     public void makeMove(Move m) {
-
+    	System.out.println(m.toString());
+    	board[m.getCol() - 1][m.getRow() - 1] = m.getPeice();
     }
 
     public Boolean isLegal(Move m) {
-    	//FIX ME
+    	if (!isOver()) {
+    		if (board[m.getCol() - 1][m.getRow()- 1].getNum() == -1) {
+    			return true;
+    		}
+    	}
     	return false;
     }
 
     public Boolean isOver() {
-    	//FIX ME
+    	int[][][] solutions = {{{}}}
     	return false;
+    }
+
+    public String toString() {
+    	String s = "";
+			s = s + board[0][0] + "|" + board[1][0] + "|" + board[2][0] + "\n";
+			s += "______\n";
+			s = s + board[0][1] + "|" + board[1][1] + "|" + board[2][1] + "\n";
+			s += "______\n";
+			s = s + board[0][2] + "|" + board[1][2] + "|" + board[2][2] + "\n";
+			return s;
     }
 
 }
