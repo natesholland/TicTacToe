@@ -36,10 +36,10 @@ JC = javac
 #
 
 CLASSES = \
-        Peice.java \
         Board.java \
-        TicTacToe.java \
-        Move.java
+        Peice.java \
+        Move.java \
+        Game.java
 
 
 #

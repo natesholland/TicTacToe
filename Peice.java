@@ -5,9 +5,6 @@ public class Peice {
 	/** the value for the tic tac toe peice*/
 	private int num;
 
-
-
-
 	public int fromString(String s) {
 		if (s =="X") {
 			return 1;
@@ -24,12 +21,14 @@ public class Peice {
 			return "X";
 		} else if (num == 0) {
 			return "O";
+		} else if(num == -1) {
+			return " ";
 		} else {
 			return "You have an error somewhere";
 		}
 	}
 
-	public  void Peice(int i) {
+	public  Peice(int i) {
 		num = i;
 	}
 
