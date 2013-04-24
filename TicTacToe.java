@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class TicTacToe {
 
+	/** Main method in Tic Tac Toe. Continues looping until the game is over. */
 	public static void main (String args[]) {
 		Board b = new Board();
 		Scanner sIn = new Scanner(System.in);
@@ -52,7 +53,5 @@ public class TicTacToe {
 		}
 		System.exit(0);
 	}
-
-	public void not(){}
 
 }
