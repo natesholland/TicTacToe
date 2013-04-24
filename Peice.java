@@ -59,5 +59,11 @@ public class Peice {
 		}
 	}
 
+	@Override
+	public boolean equals(Object t) {
+		Peice p = (Peice) t;
+		return p.getNum() == num;
+	}
+
 
 }

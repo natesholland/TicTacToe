@@ -30,14 +30,10 @@ public class Move {
 	}
 
 	public static Move parseMove(String s) {
-		System.out.println(s);
 		String[] args = s.split(" ");
-
 		int col = Integer.parseInt(args[0]);
 		int row = Integer.parseInt(args[1]);
 		Peice p = new Peice(args[2]);
-		System.out.println(Integer.toString(col) + " " + Integer.toString(row) + " " + p.toString());
-		System.out.println(p);
 		return new Move(col, row, p);
 	}
 
@@ -45,7 +41,7 @@ public class Move {
 		String[] args = s.split(" ");
 		try {
 			int col = Integer.parseInt(args[0]);
-			int row = Integer.parseInt(args[0]);
+			int row = Integer.parseInt(args[1]);
 			if (col > 3 || col < 1) {
 				return false;
 			}
