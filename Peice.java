@@ -2,20 +2,23 @@ package TicTacToe;
 
 public class Peice {
 
-	/** the value for the tic tac toe peice*/
+	/** the value for the tic tac toe peice
+	* a 1 coresponds to an X and a 0 coresponds to an O. */
 	private int num = 100;
 
+	/** Method that parses a string and turns it into am int.
+	* I actually don't know if I ever use this. */
 	public int fromString(String s) {
 		if (s =="X") {
 			return 1;
 		} else if (s == "O") {
 			return 0;
 		} else {
-			//FIX ME
 			return 100;
 		}
 	}
 
+	/** The toString method for the Peice. */
 	public String toString() {
 		if (num == 1) {
 			return "X";
@@ -28,10 +31,12 @@ public class Peice {
 		}
 	}
 
+	/** A peice constructor that takes in an int and sets that as the number for the peice. */
 	public  Peice(int i) {
 		num = i;
 	}
 
+	/** Method that parses a string and turns it into a Peice. */
 	public Peice(String s) {
 		if (s.equals("X")) {
 			num = 1;
@@ -45,10 +50,13 @@ public class Peice {
 		}
 	}
 
+	/** Method that returns the number. */
 	public int getNum() {
 		return num;
 	}
 
+	/** A method that switches what side the peice is on. This is used
+	* for when we want to switch what side is playing. */
 	public void switchSide() {
 		if (num == 1) {
 			num = 0;

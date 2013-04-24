@@ -2,8 +2,12 @@ package TicTacToe;
 
 public class Board {
 
+    /** Private 2D array of Peices which serves as the Tic Tac Toe board. 
+    * This easily could have been stored as a single array but I decided to
+    * make it a 2D array for kicks. */
 	private Peice[][] board;
 
+    /** Board constructor which creates a board of empty peices. */
     public Board() {
     	board = new Peice[3][3];
     	for (int i=0; i<3; i++) {
@@ -13,10 +17,13 @@ public class Board {
     	}
     }
 
+    /** Method that takes in a move and makes it on the board. */
     public void makeMove(Move m) {
     	board[m.getCol() - 1][m.getRow() - 1] = m.getPeice();
     }
 
+    /** Checks if a move is legal, basically makes sure the game isn't over
+    * and where you are moving isn't full. */
     public Boolean isLegal(Move m) {
     	if (!isOver()) {
     		if (board[m.getCol() - 1][m.getRow()- 1].getNum() == -1) {
@@ -26,11 +33,11 @@ public class Board {
     	return false;
     }
 
+    /** Checks if the game is over. Checks for solutions as well as a full board. */
     public Boolean isOver() {
     	int[][][] solutions = {{{1, 2, 3}, {1, 2, 3}}, {{1, 1, 1},{1, 2, 3}}, {{2, 2, 2},{1, 2, 3}},
     		{{3, 3, 3},{1, 2, 3}}, {{1, 2, 3},{1, 1, 1}}, {{1, 2, 3},{2, 2, 2}}, 
     		{{1, 2, 3},{3, 3, 3}}, {{1, 2, 3}, {3, 2, 1}}}; 
-
     	for (int[][] sol : solutions) {
             Peice q = board[sol[0][0] - 1][sol[1][0] - 1];
             Peice w = board[sol[0][1] - 1][sol[1][1] - 1];
@@ -51,6 +58,7 @@ public class Board {
     	return full;
     }
 
+    /** Method that returns the peice of who won. If it is a draw it returns the empty peice. */
     public Peice whoWon() {
         int[][][] solutions = {{{1, 2, 3}, {1, 2, 3}}, {{1, 1, 1},{1, 2, 3}}, {{2, 2, 2},{1, 2, 3}},
             {{3, 3, 3},{1, 2, 3}}, {{1, 2, 3},{1, 1, 1}}, {{1, 2, 3},{2, 2, 2}}, 
@@ -69,6 +77,7 @@ public class Board {
         return new Peice(-1);
     }
 
+    /** To string method for the board. This is used to print out the board and show the player the game status. */
     public String toString() {
     	String s = "";
 			s = s + board[0][0] + "|" + board[1][0] + "|" + board[2][0] + "\n";
