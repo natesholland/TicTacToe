@@ -1,4 +1,4 @@
 TicTacToe
 =========
 
-A friend once told me that a good way to learn a new language was to write Tic Tac Toe. It uses a little bit of logic, a little bit of IO, and forces you to learn a lot of the basic methods. As such this is not intented to be the prettiest or simplest way I could write Tic Tac Toe. In fact a lot of it is over complicated but I wanted to work on separating out all of the peices into their own classes and compiling them all in a package. Any changes are welcome and those looking to learn Java can use this as an example. Looking back I highly recommend using Tic Tac Toe as a way to learn a language and there may be more to come in this line of project.
+A friend once told me that a good way to learn a new language was to write Tic Tac Toe. It uses a little bit of logic, a little bit of IO, and forces you to learn a lot of the basic methods. So here is where I will be putting all of my learning experiences with different languages. Since a lot of these will be the first time I will be using the language I highly doubt they will be particularly elegant or simple. I'll try to put some explenation about what I was thinking in the README's
