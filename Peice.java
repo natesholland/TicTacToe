@@ -66,7 +66,7 @@ public class Peice {
 			num = 100;
 		}
 	}
-
+gi
 	@Override
 	public boolean equals(Object t) {
 		Peice p = (Peice) t;
